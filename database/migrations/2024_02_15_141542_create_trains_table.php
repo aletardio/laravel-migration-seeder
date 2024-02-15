@@ -22,8 +22,8 @@ return new class extends Migration
             $table->time('arrival_time');
             $table->smallInteger('code_train')->unsigned();
             $table->tinyInteger('number_coaches')->unsigned();
-            $table->boolean('on_time')->default(1);
-            $table->boolean('delete')->default(0);
+            $table->boolean('on_time')->default(true);
+            $table->boolean('delete')->default(false);
             $table->timestamps();
         });
     }
