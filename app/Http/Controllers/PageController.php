@@ -11,4 +11,12 @@ class PageController extends Controller
     {
         return view('home');
     }
+
+    public function index()
+    {
+
+        $trains = Train::all();
+
+        return view('trains.index', compact('trains'));
+    }
 }
